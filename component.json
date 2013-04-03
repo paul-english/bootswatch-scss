@@ -6,7 +6,7 @@
 	"homepage": "http://bootswatch.com",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/nurb/bootswatch-scss.git"
+		"url": "git://github.com/nrub/bootswatch-scss.git"
 	},
 	"licenses": [
 		{
