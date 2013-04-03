@@ -9,7 +9,16 @@ packaged for use as a bower component.
 Usage
 -----
 
+Install it to your bower componenet using,
+
     bower install bootswatch-sass
+
+In the styles file you wish to use it in you may have something
+similar to,
+
+    @import "bootswatch-scss/readable/variables";
+    @import "sass-bootstrap/lib/bootstrap";
+    @import "bootswatch-scss/readable/bootswatch";
 
 Copyright and License
 ----
