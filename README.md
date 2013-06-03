@@ -11,7 +11,7 @@ Usage
 
 Install it to your bower componenet using,
 
-    bower install bootswatch-sass
+    bower install bootswatch-scss
 
 In the styles file you wish to use it in you may have something
 similar to,
