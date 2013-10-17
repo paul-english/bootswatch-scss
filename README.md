@@ -1,10 +1,8 @@
 Bootswatch-Sass
 ==========
 
-Bootswatch-sass is a version of
-[bootswatch-rails](https://github.com/maxim/bootswatch-rails), based
-off the [bootswatch](https://github.com/thomaspark/bootswatch) themes
-packaged for use as a bower component.
+Bootswatch-sass is a version of the [bootswatch](https://github.com/thomaspark/bootswatch) themes
+packaged as scss and made for use as a bower component.
 
 Usage
 -----
@@ -16,9 +14,12 @@ Install it to your bower componenet using,
 In the styles file you wish to use it in you may have something
 similar to,
 
+    @import "sass-bootstrap/lib/variables;
     @import "bootswatch-scss/readable/variables";
     @import "sass-bootstrap/lib/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
+
+It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
 
 Copyright and License
 ----
