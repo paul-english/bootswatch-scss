@@ -1,4 +1,4 @@
-// Yeti 3.1.0
+// Yeti 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
@@ -15,68 +15,63 @@
     background-color: #b3b3b3;
   }
 
-  .dropdown-menu {
-    border: none;
+  &-collapse {
+    border-top-color: $dropdown-divider-bg;
+    @include box-shadow(none);
+  }
 
-    > li > a,
-    > li > a:focus {
-      background-color: transparent;
-      font-size: 13px;
-      font-weight: 300;
+  .dropdown {
+
+    &-menu {
+      border: none;
+
+      > li > a,
+      > li > a:focus {
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: 300;
+      }
+    }
+
+    &-header {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+  }
+
+  &-default {
+
+    .dropdown-menu {
+      background-color: $navbar-default-bg;
+
+      > li > a,
+      > li > a:focus {
+        color: $navbar-default-color;
+      }
+
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-default-link-hover-bg;
+      }
     }
   }
-  .dropdown-header {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
 
-.navbar-collapse {
-  border: none;
-  font-size: 13px;
-  font-weight: 300;
+  &-inverse {
 
-  border-top-color: $dropdown-divider-bg;
-  @include box-shadow(none);
-}
+    .dropdown-menu {
+      background-color: $navbar-inverse-bg;
 
-.navbar-default {
-  border: none;
-  font-size: 13px;
-  font-weight: 300;
+      > li > a,
+      > li > a:focus {
+        color: $navbar-inverse-color;
+      }
 
-  .dropdown-menu {
-    background-color: $navbar-default-bg;
-
-    > li > a,
-    > li > a:focus {
-      color: $navbar-default-color;
-    }
-
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-default-link-hover-bg;
-    }
-  }
-}
-
-.navbar-inverse {
-  border: none;
-  font-size: 13px;
-  font-weight: 300;
-
-  .dropdown-menu {
-    background-color: $navbar-inverse-bg;
-
-    > li > a,
-    > li > a:focus {
-      color: $navbar-inverse-color;
-    }
-
-    > li > a:hover,
-    > .active > a,
-    > .active > a:hover {
-      background-color: $navbar-inverse-link-hover-bg;
+      > li > a:hover,
+      > .active > a,
+      > .active > a:hover {
+        background-color: $navbar-inverse-link-hover-bg;
+      }
     }
   }
 }
@@ -85,18 +80,18 @@
 
 .btn {
   padding: 14px 28px;
-}
 
-.btn-lg {
-  padding: 16px 32px;
-}
+  &-lg {
+    padding: 16px 32px;
+  }
 
-.btn-sm {
-  padding: 8px 16px;
-}
+  &-sm {
+    padding: 8px 16px;
+  }
 
-.btn-xs {
-  padding: 4px 8px;
+  &-xs {
+    padding: 4px 8px;
+  }
 }
 
 .btn-group {
@@ -314,23 +309,15 @@ label,
       border-radius: 3px;
     }
   }
-}
 
-.pagination-lg > li > a {
-  font-size: $font-size-small;
-  font-weight: 300;
-  color: $gray-light;
+  &-lg > li > a {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
-  padding-left: 22px;
-  padding-right: 22px;
-}
-
-.pagination-sm > li > a {
-  font-size: $font-size-small;
-  font-weight: 300;
-  color: $gray-light;
-
-  padding: 0 5px;
+  &-sm > li > a {
+    padding: 0 5px;
+  }
 }
 
 .pager {
@@ -363,16 +350,11 @@ label,
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
-}
 
-.label-default {
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 0;
-  font-weight: 300;
-
-  background-color: $btn-default-bg;
-  color: $btn-default-color;
+  &-default {
+    background-color: $btn-default-bg;
+    color: $btn-default-color;
+  }
 }
 
 .badge {
@@ -391,21 +373,24 @@ label,
 
 // Containers =================================================================
 
-.dropdown-menu {
-  padding: 0;
-  margin-top: 0;
-  font-size: $font-size-small;
+.dropdown {
 
-  > li > a {
-    padding: 12px 15px;
+  &-menu {
+    padding: 0;
+    margin-top: 0;
+    font-size: $font-size-small;
+
+    > li > a {
+      padding: 12px 15px;
+    }
   }
-}
 
-.dropdown-header {
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 9px;
-  text-transform: uppercase;
+  &-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 9px;
+    text-transform: uppercase;
+  }
 }
 
 .popover {
@@ -414,8 +399,10 @@ label,
   font-weight: 300;
 }
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+.panel {
+  &-heading,
+  &-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
 }
