@@ -14,9 +14,9 @@ Install it to your bower componenet using,
 In the styles file you wish to use it in you may have something
 similar to,
 
-    @import "sass-bootstrap/lib/variables;
+    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables;
     @import "bootswatch-scss/readable/variables";
-    @import "sass-bootstrap/lib/bootstrap";
+    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
 
 It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
