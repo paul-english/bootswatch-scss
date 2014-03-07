@@ -9,7 +9,7 @@
 	"url": "git://github.com/nrub/bootswatch-scss.git"
     },
     "dependencies": {
-        "sass-bootstrap": "~3.0.0"
+        "bootstrap-sass-official": "~3.0.0"
     },
     "licenses": [
 	{
