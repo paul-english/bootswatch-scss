@@ -1,7 +1,7 @@
 {
     "name": "bootswatch-scss",
     "description": "Bootswatch themes in scss format packaged as a component.",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "author": "Paul English",
     "homepage": "http://bootswatch.com",
     "repository": {
