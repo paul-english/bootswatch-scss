@@ -47,6 +47,8 @@ $component-offset-horizontal: 180px !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
+$web-font: "//fonts.googleapis.com/css?family=Lobster|Cabin:400,700";
+
 $font-family-sans-serif:  "Cabin", Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
