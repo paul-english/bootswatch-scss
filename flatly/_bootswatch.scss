@@ -1,177 +1,246 @@
-// Flatly 3.0.0
+// Flatly 3.1.1
 // Bootswatch
 // -----------------------------------------------------
 
-@import url($web-font);
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
 
 // Navbar =====================================================================
+
+.navbar {
+  border-width: 0;
+}
+.navbar-default {
+
+  .badge {
+    background-color: #fff;
+    color: $navbar-default-bg;
+  }
+}
+
+.navbar-inverse {
+
+  .badge {
+    background-color: #fff;
+    color: $navbar-inverse-bg;
+  }
+}
+
+.navbar-brand {
+  padding: 18.5px 15px 20.5px;
+}
 
 // Buttons ====================================================================
 
 .btn:active {
-	@include box-shadow(none);
+  @include box-shadow(none);
 }
 
 .btn-group.open .dropdown-toggle {
-	@include box-shadow(none);
+  @include box-shadow(none);
 }
 
 // Typography =================================================================
 
-.text-primary {
-	color: $brand-primary;
+.text-primary,
+.text-primary:hover {
+  color: $brand-primary;
 }
 
-.text-success {
-	color: $brand-success;
+.text-success,
+.text-success:hover {
+  color: $brand-success;
 }
 
-.text-danger {
-	color: $brand-danger;
+.text-danger,
+.text-danger:hover {
+  color: $brand-danger;
 }
 
-.text-warning {
-	color: $brand-warning;
+.text-warning,
+.text-warning:hover {
+  color: $brand-warning;
 }
 
-.text-info {
-	color: $brand-info;
+.text-info,
+.text-info:hover {
+  color: $brand-info;
 }
 
 // Tables =====================================================================
 
+table,
 .table {
 
-	tr.success,
-	tr.warning,
-	tr.danger {
-		color: #fff;
-	}
+  a {
+    text-decoration: underline;
+  }
+
+  .success,
+  .warning,
+  .danger,
+  .info {
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border: none;
+  }
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid $table-border-color;
 }
 
 // Forms ======================================================================
 
-.form-control,textarea.form-control,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-	border-width: 2px;
-	@include box-shadow(none);
+.form-control,
+input, {
+  border-width: 2px;
+  @include box-shadow(none);
 
-	&:focus {
-		@include box-shadow(none);
-	}
+  &:focus {
+    @include box-shadow(none);
+  }
 }
 
 .has-warning {
-	.help-block,
-	.control-label {
-		color: $brand-warning;
-	}
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: $brand-warning;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid $brand-warning;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid $brand-warning;
+  }
+
+  .input-group-addon {
+    border-color: $brand-warning;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: $brand-danger;
-	}
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: $brand-danger;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid $brand-danger;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid $brand-danger;
+  }
+
+  .input-group-addon {
+    border-color: $brand-danger;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: $brand-success;
-	}
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: $brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid $brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid $brand-success;
+  }
+
+  .input-group-addon {
+    border-color: $brand-success;
+  }
 }
 
 // Navs =======================================================================
 
-.pagination {
-	
-	a {
-		color: #fff;
-
-		&:hover {
-			color: $text-color;
-		}
-	}
-
-	.disabled {
-		&>a,
-		&>a:hover,
-		&>a:focus,
-		&>span {
-			background-color: lighten($brand-success, 15%);
-		}
-	}
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
 }
 
 .pager {
-	a {
-		color: #fff;
-		&:hover {
-			color: $text-color;
-		}
-	}
+  a,
+  a:hover {
+    color: #fff;
+  }
 
-	.disabled {
-		&>a,
-		&>a:hover,
-		&>a:focus,
-		&>span {
-			background-color: lighten($brand-success, 15%);
-		}
-	}
+  .disabled {
+    &>a,
+    &>a:hover,
+    &>a:focus,
+    &>span {
+      background-color: $pagination-disabled-bg;
+    }
+  }
 }
 
 // Indicators =================================================================
 
 .alert {
 
-	a,
-	.alert-link {
-		color: #fff;
-		text-decoration: underline;
-	}
+  a,
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.4;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      opacity: 1;
+    }
+  }
 }
 
 // Progress bars ==============================================================
 
 .progress {
-	height: 10px;
-	@include box-shadow(none);
+  height: 10px;
+  @include box-shadow(none);
+  .progress-bar {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 // Containers =================================================================
 
 .well {
-	@include box-shadow(none);
-	border-width: 0;
+  @include box-shadow(none);
 }

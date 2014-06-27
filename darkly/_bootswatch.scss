@@ -2,24 +2,39 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url($web-font);
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
 
 // Navbar =====================================================================
 
 .navbar {
   border-width: 0;
+}
+.navbar-default {
 
-  &.navbar-brand {
-    padding: 18.5px 15px 20.5px;
+  .badge {
+    background-color: #fff;
+    color: $navbar-default-bg;
   }
+}
 
-  &.navbar-form {
-    .form-control {
-      background-color: white;
+.navbar-inverse {
 
-      &:focus {
-        border-color: white;
-      }
+  .badge {
+    background-color: #fff;
+    color: $navbar-inverse-bg;
+  }
+}
+
+.navbar-brand {
+  padding: 18.5px 15px 20.5px;
+}
+
+.navbar-form {
+  .form-control {
+    background-color: white;
+
+    &:focus {
+      border-color: white;
     }
   }
 }
@@ -89,21 +104,27 @@ table,
   > tfoot > tr > td {
     border: none;
   }
+}
 
-  &.table-bordered > thead > tr > th,
-  &.table-bordered > tbody > tr > th,
-  &.table-bordered > tfoot > tr > th,
-  &.table-bordered > thead > tr > td,
-  &.table-bordered > tbody > tr > td,
-  &.table-bordered > tfoot > tr > td {
-    border: 1px solid $table-border-color;
-  }
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid $table-border-color;
 }
 
 // Forms ======================================================================
 
+input,
+textarea {
+  color: $input-color;
+}
+
 .form-control,
-input {
+input,
+textarea {
   border: none;
   @include box-shadow(none);
 
@@ -114,7 +135,12 @@ input {
 
 .has-warning {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: $brand-warning;
   }
 
@@ -122,11 +148,20 @@ input {
   .form-control:focus {
     @include box-shadow(none);
   }
+
+  .input-group-addon {
+    border-color: $brand-warning;
+  }
 }
 
 .has-error {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: $brand-danger;
   }
 
@@ -134,17 +169,30 @@ input {
   .form-control:focus {
     @include box-shadow(none);
   }
+
+  .input-group-addon {
+    border-color: $brand-danger;
+  }
 }
 
 .has-success {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
     color: $brand-success;
   }
 
   .form-control,
   .form-control:focus {
     @include box-shadow(none);
+  }
+
+  .input-group-addon {
+    border-color: $brand-success;
   }
 }
 
@@ -183,6 +231,10 @@ input {
   }
 }
 
+.breadcrumb a {
+  color: #fff;
+}
+
 // Indicators =================================================================
 
 .alert {
@@ -199,6 +251,10 @@ input {
 .progress {
   height: 10px;
   @include box-shadow(none);
+  .progress-bar {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 // Containers =================================================================
@@ -209,26 +265,9 @@ input {
 
 .popover,
 .modal {
-  color: $gray-dark;
-}
-
-.breadcrumb a {
-  color: #fff;
+  color: $text-color;
 }
 
 .panel-default > .panel-heading {
   background-color: $panel-footer-bg;
-}
-
-.modal {
-  color: $text-color;
-
-  &.modal-header,
-  &.modal-footer {
-    border-color: $gray;
-  }
-}
-
-.popover {
-  color: $text-color;
 }

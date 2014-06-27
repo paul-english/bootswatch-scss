@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url($web-font);
+@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
 
 // Navbar =====================================================================
 
@@ -10,34 +10,45 @@
   @include box-shadow(none);
   border: none;
   font-size: 12px;
+}
 
-  &.navbar-default .navbar-nav {
+.navbar-default {
 
+  .badge {
+    background-color: #fff;
+    color: $navbar-default-bg;
+  }
+}
+
+.navbar-inverse {
+
+  .badge {
+    background-color: #fff;
+    color: $navbar-inverse-bg;
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
+  font-weight: 300;
+}
 
-  font-weight: $copy-font-weight;
-
-  &.btn-default {
-    &:hover {
-      background-color: darken($btn-default-bg, 3%);
-    }
+.btn-default {
+  &:hover {
+    background-color: darken($btn-default-bg, 3%);
   }
+}
 
-  &.btn-sm,
-  &.btn-xs {
-    font-size: 12px;
-  }
+.btn-sm,
+.btn-xs {
+  font-size: 12px;
 }
 
 // Typography =================================================================
 
 body {
-  font-weight: $copy-font-weight;
+  font-weight: 300;
 }
 
 .text-primary,
@@ -77,7 +88,7 @@ body {
 
   > li > a {
     font-size: 12px;
-    font-weight: $copy-font-weight;
+    font-weight: 300;
   }
 }
 
@@ -100,6 +111,10 @@ table,
     text-decoration: underline;
   }
 
+  .text-muted {
+    color: $text-muted;
+  }
+
   > thead > tr > th,
   > tbody > tr > th,
   > tfoot > tr > th,
@@ -112,12 +127,17 @@ table,
 
 // Forms ======================================================================
 
+input,
+textarea {
+  color: $input-color;
+}
+
 label,
 .radio label,
 .checkbox label,
 .help-block {
   font-size: 12px;
-  font-weight: $copy-font-weight;
+  font-weight: 300;
 }
 
 .input-addon,
@@ -127,21 +147,24 @@ label,
 
 .has-warning {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: $brand-warning;
   }
 }
 
 .has-error {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: $brand-danger;
   }
 }
 
 .has-success {
   .help-block,
-  .control-label {
+  .control-label,
+  .form-control-feedback {
     color: $brand-success;
   }
 }
@@ -198,7 +221,7 @@ label,
 }
 
 .label {
-  font-weight: $copy-font-weight;
+  font-weight: 300;
 }
 
 .alert {
@@ -220,11 +243,11 @@ label,
 
 .panel {
   border: none;
+}
 
-  &.panel-default > .panel-heading {
-    background-color: $table-bg-hover;
-    color: $text-color;
-  }
+.panel-default > .panel-heading {
+  background-color: $table-bg-hover;
+  color: $text-color;
 }
 
 .thumbnail {
@@ -234,17 +257,15 @@ label,
 
 .modal {
   padding: 0;
-
-  &.modal-header,
-  &.modal-footer {
-    background-color: $table-bg-hover;
-    border: none;
-    border-radius: 0;
-  }
 }
 
-.popover {
-  &.popover-title {
-    border: none;
-  }
+.modal-header,
+.modal-footer {
+  background-color: $table-bg-hover;
+  border: none;
+  border-radius: 0;
+}
+
+.popover-title {
+  border: none;
 }

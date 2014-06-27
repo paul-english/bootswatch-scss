@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url($web-font);
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 
 // Navbar =====================================================================
 
@@ -15,84 +15,83 @@
     background-color: #b3b3b3;
   }
 
-  &-collapse {
-    border-top-color: $dropdown-divider-bg;
-    @include box-shadow(none);
+  .btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 
-  .dropdown {
+  .dropdown-menu {
+    border: none;
 
-    &-menu {
-      border: none;
-
-      > li > a,
-      > li > a:focus {
-        background-color: transparent;
-        font-size: 13px;
-        font-weight: 300;
-      }
-    }
-
-    &-header {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-  }
-
-  &-default {
-
-    .dropdown-menu {
-      background-color: $navbar-default-bg;
-
-      > li > a,
-      > li > a:focus {
-        color: $navbar-default-color;
-      }
-
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: $navbar-default-link-hover-bg;
-      }
+    > li > a,
+    > li > a:focus {
+      background-color: transparent;
+      font-size: 13px;
+      font-weight: 300;
     }
   }
 
-  &-inverse {
+  .dropdown-header {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
 
-    .dropdown-menu {
-      background-color: $navbar-inverse-bg;
+.navbar-default {
 
-      > li > a,
-      > li > a:focus {
-        color: $navbar-inverse-color;
-      }
+  .dropdown-menu {
+    background-color: $navbar-default-bg;
 
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: $navbar-inverse-link-hover-bg;
-      }
+    > li > a,
+    > li > a:focus {
+      color: $navbar-default-color;
+    }
+
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      background-color: $navbar-default-link-hover-bg;
     }
   }
+}
+
+.navbar-inverse {
+
+  .dropdown-menu {
+    background-color: $navbar-inverse-bg;
+
+    > li > a,
+    > li > a:focus {
+      color: $navbar-inverse-color;
+    }
+
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      background-color: $navbar-inverse-link-hover-bg;
+    }
+  }
+}
+
+.navbar-collapse {
+  border-top-color: $dropdown-divider-bg;
+  @include box-shadow(none);
 }
 
 // Buttons ====================================================================
 
 .btn {
   padding: 14px 28px;
-
-  &-lg {
-    padding: 16px 32px;
-  }
-
-  &-sm {
-    padding: 8px 16px;
-  }
-
-  &-xs {
-    padding: 4px 8px;
-  }
 }
+.btn-lg {
+  padding: 16px 32px;
+}
+.btn-sm {
+  padding: 8px 16px;
+}
+.btn-xs {
+  padding: 4px 8px;
+}
+
 
 .btn-group {
 
@@ -228,7 +227,6 @@ table {
 input,
 .form-control {
   padding: 7px;
-  font-size: $font-size-small;
 }
 
 label,
@@ -240,7 +238,6 @@ label,
   font-weight: normal;
 }
 
-.form-group .btn,
 .input-group-addon,
 .input-group-btn .btn {
   padding: 8px 14px;
@@ -309,15 +306,14 @@ label,
       border-radius: 3px;
     }
   }
+}
+.pagination-lg > li > a {
+  padding-left: 22px;
+  padding-right: 22px;
+}
 
-  &-lg > li > a {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  &-sm > li > a {
-    padding: 0 5px;
-  }
+.pagination-sm > li > a {
+  padding: 0 5px;
 }
 
 .pager {
@@ -333,6 +329,15 @@ label,
 
 // Indicators =================================================================
 
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 .alert {
   font-size: $font-size-small;
   font-weight: 300;
@@ -343,6 +348,16 @@ label,
     color: #fff;
     text-decoration: underline;
   }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
 }
 
 .label {
@@ -350,11 +365,11 @@ label,
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
+}
 
-  &-default {
-    background-color: $btn-default-bg;
-    color: $btn-default-color;
-  }
+.label-default {
+  background-color: $btn-default-bg;
+  color: $btn-default-color;
 }
 
 .badge {
@@ -373,24 +388,21 @@ label,
 
 // Containers =================================================================
 
-.dropdown {
+.dropdown-menu {
+  padding: 0;
+  margin-top: 0;
+  font-size: $font-size-small;
 
-  &-menu {
-    padding: 0;
-    margin-top: 0;
-    font-size: $font-size-small;
-
-    > li > a {
-      padding: 12px 15px;
-    }
+  > li > a {
+    padding: 12px 15px;
   }
+}
 
-  &-header {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 9px;
-    text-transform: uppercase;
-  }
+.dropdown-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 .popover {
@@ -399,10 +411,8 @@ label,
   font-weight: 300;
 }
 
-.panel {
-  &-heading,
-  &-footer {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
+.panel-heading,
+.panel-footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
