@@ -12,9 +12,9 @@ Add it to your bower_components directory by executing
 
 To use a theme in a Sass file, add the following:
 
-    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables;
+    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables;
     @import "bootswatch-scss/readable/variables";
-    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/bootstrap";
+    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
 
 It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
