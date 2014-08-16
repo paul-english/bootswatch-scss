@@ -6,8 +6,16 @@
     "homepage": "http://bootswatch.com",
     "repository": {
 	"type": "git",
-	"url": "git://github.com/nrub/bootswatch-scss.git"
+	"url": "git://github.com/ayan4m1/bootswatch-scss.git"
     },
+    "main": [
+        "**/_bootswatch.scss",
+	"**/_variables.scss"
+    ],
+    "ignore": [
+        "/.*",
+	"composer.json"
+    ],
     "dependencies": {
         "bootstrap-sass-official": "~3.2.0"
     },
