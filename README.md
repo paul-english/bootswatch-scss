@@ -10,14 +10,14 @@ Add it to your bower_components directory by executing
 
     bower install bootswatch-scss
 
-To use a theme in a Sass file, add the following:
+Add the following to a Sass file to import Bootswatch
 
     @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables;
     @import "bootswatch-scss/readable/variables";
     @import "bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
 
-It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
+It seems you have to shuffle the import order around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
 
 Copyright/License
 -----
