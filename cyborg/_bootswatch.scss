@@ -1,15 +1,10 @@
-// Cyborg 3.1.1
+// Cyborg 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
 @import url($web-font);
 
 // Navbar =====================================================================
-
-.navbar {
-
-  border-bottom: 1px solid $gray-dark;
-}
 
 // Buttons ====================================================================
 
@@ -46,7 +41,7 @@ table,
 .table {
   color: #fff;
 
-  a {
+  a:not(.btn) {
     color: #fff;
     text-decoration: underline;
   }
@@ -70,7 +65,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: $brand-warning;
   }
 }
@@ -83,7 +79,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: $brand-danger;
   }
 }
@@ -96,7 +93,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border-color: $brand-success;
   }
 }
@@ -132,15 +130,19 @@ legend {
   }
 
   .close {
-    color: #fff;
     text-decoration: none;
-    opacity: 0.4;
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
   }
 }
 

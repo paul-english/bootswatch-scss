@@ -1,7 +1,8 @@
-// Simplex 3.1.1
+// Simplex 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
+@import url($web-font);
 @mixin btn-shadow($color) {
   @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
@@ -10,11 +11,14 @@
 
 // Navbar =====================================================================
 
-.navbar-inverse {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $brand-primary;
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 
@@ -70,6 +74,10 @@ th {
 
 legend {
   color: $headings-color;
+}
+
+label {
+  font-weight: normal;
 }
 
 .has-warning {

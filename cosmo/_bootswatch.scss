@@ -1,4 +1,4 @@
-// Cosmo 3.1.1
+// Cosmo 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -6,11 +6,14 @@
 
 // Navbar =====================================================================
 
-.navbar-inverse {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $brand-primary;
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 
@@ -21,6 +24,10 @@
 }
 
 // Typography =================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
 
 .text-primary,
 .text-primary:hover {
@@ -52,7 +59,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -79,7 +86,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-warning;
   }
 }
@@ -92,7 +100,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-danger;
   }
 }
@@ -105,7 +114,8 @@ table,
   }
 
   .form-control,
-  .form-control:focus {
+  .form-control:focus,
+  .input-group-addon {
     border: 1px solid $brand-success;
   }
 }
@@ -129,24 +139,23 @@ table,
 
 // Indicators =================================================================
 
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 .alert {
   border: none;
 
   .alert-link {
     text-decoration: underline;
     color: #fff;
-  }
-
-  .close {
-    color: #fff;
-    text-decoration: none;
-    opacity: 0.4;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-      opacity: 1;
-    }
   }
 }
 
@@ -167,8 +176,26 @@ table,
 
 // Containers =================================================================
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+.panel {
+  .panel-heading,
+  .panel-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
 }
