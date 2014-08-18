@@ -14,7 +14,7 @@ Install it to your bower componenet using,
 In the styles file you wish to use it in you may have something
 similar to,
 
-    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables;
+    @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
     @import "bootswatch-scss/readable/variables";
     @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
