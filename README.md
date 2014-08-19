@@ -12,7 +12,7 @@ Add it to your bower_components directory by executing
 
 To use a theme in a Sass file, add the following:
 
-    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables;
+    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
     @import "bootswatch-scss/readable/variables";
     @import "bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
