@@ -5,8 +5,8 @@
     "author": "Paul English",
     "homepage": "http://bootswatch.com",
     "repository": {
-	"type": "git",
-	"url": "git://github.com/nrub/bootswatch-scss.git"
+	      "type": "git",
+	      "url": "git://github.com/log0ymxm/bootswatch-scss.git"
     },
     "dependencies": {
         "bootstrap-sass-official": "~3.1.1"
