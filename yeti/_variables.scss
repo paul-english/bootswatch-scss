@@ -7,9 +7,9 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$gray:                   #6f6f6f !default; // #555
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   #6f6f6f !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
@@ -85,17 +85,17 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
+$padding-base-vertical:     14px !default;
+$padding-base-horizontal:   18px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large-vertical:    16px !default;
+$padding-large-horizontal:  20px !default;
 
-$padding-small-vertical:    5px !default;
-$padding-small-horizontal:  10px !default;
+$padding-small-vertical:    8px !default;
+$padding-small-horizontal:  12px !default;
 
-$padding-xs-vertical:       1px !default;
-$padding-xs-horizontal:     5px !default;
+$padding-xs-vertical:       4px !default;
+$padding-xs-horizontal:     6px !default;
 
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
@@ -125,7 +125,7 @@ $table-cell-padding:            8px !default;
 $table-condensed-cell-padding:  5px !default;
 
 //** Default background color used for all tables.
-$table-bg:                      hsla(0, 100%, 100%, 0) !default;
+$table-bg:                      transparent !default;
 //** Background color used for `.table-striped`.
 $table-bg-accent:               #f9f9f9 !default;
 //** Background color used for `.table-hover`.
@@ -354,17 +354,17 @@ $navbar-default-link-hover-bg:             #272727 !default;
 $navbar-default-link-active-color:         #fff !default;
 $navbar-default-link-active-bg:            #272727 !default;
 $navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          hsla(0, 100%, 100%, 0) !default;
+$navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color:               $navbar-default-link-color !default;
 $navbar-default-brand-hover-color:         $navbar-default-brand-color !default;
-$navbar-default-brand-hover-bg:            hsla(0, 100%, 100%, 0) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           hsla(0, 100%, 100%, 0) !default;
+$navbar-default-toggle-hover-bg:           transparent !default;
 $navbar-default-toggle-icon-bar-bg:        #fff !default;
-$navbar-default-toggle-border-color:       hsla(0, 100%, 100%, 0) !default;
+$navbar-default-toggle-border-color:       transparent !default;
 
 
 // Inverted navbar
@@ -380,17 +380,17 @@ $navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 10%) !def
 $navbar-inverse-link-active-color:          #fff !default;
 $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-link-disabled-color:        #444 !default;
-$navbar-inverse-link-disabled-bg:           hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
 $navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
-$navbar-inverse-brand-hover-bg:             hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-toggle-hover-bg:            transparent !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
-$navbar-inverse-toggle-border-color:        hsla(0, 100%, 100%, 0) !default;
+$navbar-inverse-toggle-border-color:        transparent !default;
 
 
 //== Navs
@@ -429,12 +429,12 @@ $nav-pills-active-link-hover-color:         $component-active-color !default;
 //##
 
 $pagination-color:                     $link-color !default;
-$pagination-bg:                        hsla(0, 100%, 100%, 0) !default;
-$pagination-border:                    hsla(0, 100%, 100%, 0) !default;
+$pagination-bg:                        transparent !default;
+$pagination-border:                    transparent !default;
 
 $pagination-hover-color:               $link-hover-color !default;
 $pagination-hover-bg:                  $gray-lighter !default;
-$pagination-hover-border:              hsla(0, 100%, 100%, 0) !default;
+$pagination-hover-border:              transparent !default;
 
 $pagination-active-color:              #fff !default;
 $pagination-active-bg:                 $brand-primary !default;
@@ -442,7 +442,7 @@ $pagination-active-border:             hsla(0, 100%, 100%, 0) !default;
 
 $pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               #fff !default;
-$pagination-disabled-border:           hsla(0, 100%, 100%, 0) !default;
+$pagination-disabled-border:           transparent !default;
 
 
 //== Pager
@@ -520,7 +520,7 @@ $popover-bg:                          $gray-dark !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
-$popover-border-color:                hsla(0, 100%, 100%, 0) !default;
+$popover-border-color:                transparent !default;
 //** Popover fallback border color
 $popover-fallback-border-color:       $gray-dark !default;
 
@@ -822,8 +822,7 @@ $pre-scrollable-max-height:   340px !default;
 //== Type
 //
 //##
-//** Horizontal line color.
-$hr-border:                   #ddd !default;
+
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
@@ -836,10 +835,13 @@ $headings-small-color:        $gray-light !default;
 $blockquote-small-color:      $gray !default;
 //** Blockquote font size
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
+//** Horizontal line color.
+$hr-border:                   #ddd !default;
 //** Blockquote border color
 $blockquote-border-color:     $hr-border !default;
 //** Page header border color
 $page-header-border-color:    $hr-border !default;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal !default;
+
 

@@ -7,9 +7,9 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-darker:            #111 !default; // #222
 $gray-dark:              #444 !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             #bbb !default;   // #999
 $gray-lighter:           #ddd !default; // #eee
 
@@ -542,7 +542,7 @@ $tooltip-arrow-color:         $tooltip-bg !default;
 //##
 
 //** Popover body background color
-$popover-bg:                          #fff !default;
+$popover-bg:                          lighten($body-bg, 5%) !default;
 //** Popover maximum width
 $popover-max-width:                   276px !default;
 //** Popover border color
@@ -556,7 +556,7 @@ $popover-title-bg:                    darken($popover-bg, 3%) !default;
 //** Popover arrow width
 $popover-arrow-width:                 10px !default;
 //** Popover arrow color
-$popover-arrow-color:                 #fff !default;
+$popover-arrow-color:                 lighten($body-bg, 5%) !default;
 
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1) !default;
