@@ -17,7 +17,14 @@ To use a theme in a Sass file, add the following:
     @import "bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
     @import "bootswatch-scss/readable/bootswatch";
 
-It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require the original bootstrap variables before as well. See `global/build.scss` for a working example.
+It seems you have to shuffle the variables import around to make it load correctly. Some variable files will require that the theme-specific `variables.scss` be imported *before* the Bootstrap equivalent. For example:
+
+    @import "bootswatch-scss/flatly/variables";
+    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+    @import "bootstrap-sass-official/assets/stylesheets/bootstrap/bootstrap";
+    @import "bootswatch-scss/flatly/bootswatch";
+
+See `global/build.scss` for a working example.
 
 Copyright/License
 -----

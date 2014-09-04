@@ -17,7 +17,7 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: 8px $padding-base-horizontal 7px;
+  padding: $padding-base-vertical+2 $padding-base-horizontal $padding-base-vertical;
   @include shadow();
   font-size: 12px;
   font-weight: bold;
@@ -37,18 +37,18 @@
 
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 14px $padding-large-horizontal 13px;
+  padding: $padding-large-vertical+2 $padding-large-horizontal $padding-large-vertical;
   line-height: 15px;
 }
 
 .btn-sm,
 .btn-group-sm > .btn {
-  padding: 4px $padding-small-horizontal;
+  padding: $padding-small-vertical+2 $padding-small-horizontal $padding-small-vertical;
 }
 
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: $padding-xs-vertical $padding-xs-horizontal;
+  padding: $padding-xs-vertical+2 $padding-xs-horizontal $padding-xs-vertical;
 }
 
 .btn-default:hover,
@@ -96,7 +96,6 @@
 .btn-group.open .dropdown-toggle {
   @include box-shadow(none);
 }
-
 
 .navbar-btn {
   &:hover {
@@ -160,7 +159,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -170,7 +169,7 @@ table,
   .info {
     color: #fff;
 
-    a {
+    a:not(.btn) {
       color: #fff;
     }
   }
@@ -181,7 +180,7 @@ table,
   > thead > tr > td,
   > tbody > tr > td,
   > tfoot > tr > td {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -255,7 +254,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -365,21 +364,6 @@ label {
 
 // Indicators =================================================================
 
-.alert {
-  @include shadow();
-
-  a,
-  .alert-link {
-    font-weight: normal;
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
 .close {
   color: #fff;
   text-decoration: none;
@@ -389,6 +373,16 @@ label {
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+  @include shadow();
+
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -422,4 +416,20 @@ label {
 .panel {
   border: 1px solid $navbar-default-border;
   @include shadow();
+}
+
+.panel-default {
+  .close {
+    color: $text-color;
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
+}
+
+.popover {
+  color: $text-color;
 }

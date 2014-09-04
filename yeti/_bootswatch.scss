@@ -25,7 +25,7 @@
 
     > li > a,
     > li > a:focus {
-      background-color: hsla(0, 100%, 100%, 0);
+      background-color: transparent;
       font-size: 13px;
       font-weight: 300;
     }
@@ -34,6 +34,22 @@
   .dropdown-header {
     color: rgba(255, 255, 255, 0.5);
   }
+
+}
+
+.navbar-form {
+  margin-top: 7px;
+  margin-bottom: 5px;
+
+  .form-control {
+    height: auto;
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+  }
+}
+
+.navbar-collapse {
+  border-top-color: $dropdown-divider-bg;
+  @include box-shadow(none);
 }
 
 .navbar-default {
@@ -72,28 +88,22 @@
   }
 }
 
-.navbar-collapse {
-  border-top-color: $dropdown-divider-bg;
-  @include box-shadow(none);
-}
-
-
 // Buttons ====================================================================
 
 .btn {
-  padding: 14px 28px;
+  padding: $padding-base-vertical $padding-base-horizontal;
 }
 
 .btn-lg {
-  padding: 16px 32px;
+  padding: $padding-large-vertical $padding-large-horizontal;
 }
 
 .btn-sm {
-  padding: 8px 16px;
+  padding: $padding-small-vertical $padding-small-horizontal;
 }
 
 .btn-xs {
-  padding: 4px 8px;
+  padding: $padding-xs-vertical $padding-xs-horizontal;
 }
 
 .btn-group {
@@ -227,11 +237,6 @@ table {
 
 // Forms ======================================================================
 
-input,
-.form-control {
-  padding: 7px;
-}
-
 label,
 .control-label,
 .help-block,
@@ -241,19 +246,13 @@ label,
   font-weight: normal;
 }
 
-.input-group-addon,
-.input-group-btn .btn {
-  padding: 8px 14px;
-  font-size: $font-size-small;
-}
-
 // Navs =======================================================================
 
 .nav {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    border-color: hsla(0, 100%, 100%, 0);
+    border-color: transparent;
   }
 }
 
@@ -309,7 +308,6 @@ label,
       border-radius: 3px;
     }
   }
-
 }
 
 .pagination-lg > li > a {
@@ -336,6 +334,8 @@ label,
 
 .close {
   opacity: 0.4;
+  text-decoration: none;
+  text-shadow: none;
 
   &:hover,
   &:focus {
@@ -347,21 +347,10 @@ label,
   font-size: $font-size-small;
   font-weight: 300;
 
-  a,
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
   }
 }
 
@@ -420,4 +409,16 @@ label,
 .panel-footer {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+
+.panel-default {
+  .close {
+    color: $text-color;
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
+  }
 }
