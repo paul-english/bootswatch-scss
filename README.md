@@ -1,3 +1,5 @@
+This library is deprecated, the main [bootswatch library](https://github.com/thomaspark/bootswatch) now has scss versions of their themes which are up to date.
+
 Bootswatch-Sass
 ==========
 
